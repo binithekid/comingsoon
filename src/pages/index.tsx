@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-4 overflow-hidden h-screen px-40">
+    <main className="w-full flex flex-col gap-4 md:overflow-hidden h-screen px-40">
       <div className="w-full flex flex-row justify-between py-8 items-center">
         <h1 className="text-3xl font-bold tracking-tighter">SYNC</h1>
         <motion.button
@@ -76,7 +76,7 @@ export default function Home() {
           {/* Image container */}
           <img
             src={phone.src}
-            className="w-[85%] rounded-xl border border-white"
+            className="w-[85%] rounded-xl border border-gray-400"
           />
 
           {/* Elements to be placed on top of the image */}
