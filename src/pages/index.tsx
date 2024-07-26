@@ -3,22 +3,24 @@ import phone from "../../public/phoneshot.png";
 import { IoMailOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-4 md:overflow-hidden h-screen px-40">
-      <div className="w-full flex flex-row justify-between py-8 items-center">
-        <h1 className="text-3xl font-bold tracking-tighter">SYNC</h1>
-        <motion.button
-          whileHover={{
-            y: -2,
-            transition: { duration: 0.1, ease: "easeOut", bounce: 0.4 },
-          }}
-          className="flex flex-row gap-2 bg-white shadow text-sm items-center px-4 py-2 border rounded-full border-gray-400"
+    <main className="w-full flex flex-col overflow-hidden gap-4 h-screen px-4 md:px-40">
+      <div className="w-full flex flex-row justify-between py-8 items-center z-50">
+        <h1 className="md:text-3xl text-4xl font-bold tracking-tighter">
+          SYNC
+        </h1>
+        <Link
+          href="mailto:sync@synchq.io"
+          className="flex flex-row gap-2 bg-white hover:opacity-60 transition-all shadow text-sm items-center md:px-4 py-2 px-3 border rounded-full border-gray-400"
         >
-          <IoMailOutline className="text-2xl" />
-          <p className="tracking-tight text-gray-800">Get in touch</p>
-        </motion.button>
+          <IoMailOutline className="md:text-lg" />
+          <p className="tracking-tight text-gray-800 md:text-base text-sm">
+            Get in touch
+          </p>
+        </Link>
       </div>
       <div className="flex flex-row w-full flex-grow">
         <motion.div
@@ -27,10 +29,10 @@ export default function Home() {
           transition={{ delay: 0.2, duration: 0.4, ease: "easeInOut" }}
           className="flex-grow flex justify-center flex-col overflow-hidden gap-2"
         >
-          <h1 className="font-bold pb-2 tracking-tight md:text-6xl bg-gradient-to-b from-black to-gray-400 bg-clip-text text-transparent">
+          <h1 className="font-bold pb-2 tracking-tight text-4xl md:text-6xl bg-gradient-to-b from-black to-gray-400 bg-clip-text text-transparent">
             Create <span className="text-blue-500">Events</span> in Real Time
           </h1>
-          <div className="flex flex-col gap-4 w-4/5">
+          <div className="flex flex-col gap-2 md:text-base text-sm  md:gap-4 md:w-4/5">
             <p className="tracking-tight text-gray-500">
               Come & join us at Sync, for a more enhanced social experience.
             </p>
@@ -51,7 +53,7 @@ export default function Home() {
               future world of events management!
             </p>
           </div>
-          <form className="flex flex-row gap-2 w-3/5 py-3 mt-6">
+          <form className="flex flex-row gap-2 md:w-3/5 py-3 md:mt-6">
             <input
               placeholder="Enter your email"
               className="flex-grow border bg-white rounded px-4 text-sm"
@@ -71,12 +73,12 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.7, ease: "easeInOut" }}
-          className="relative flex justify-center items-center"
+          className="relative lg:flex justify-center items-center hidden"
         >
           {/* Image container */}
           <img
             src={phone.src}
-            className="w-[85%] rounded-xl border border-gray-400"
+            className="w-[80%] rounded-xl border border-gray-400"
           />
 
           {/* Elements to be placed on top of the image */}
