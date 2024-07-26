@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Add this configuration to support static export
+  // Set output to 'export' for static site export
   output: "export",
   images: {
-    unoptimized: true, // Ensure images work in static export
+    unoptimized: true, // Optional: Helps with static export if using images
   },
 };
 
